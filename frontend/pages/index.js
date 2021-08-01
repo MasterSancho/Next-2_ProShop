@@ -1,7 +1,9 @@
-import { Container } from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
 import Head from 'next/head';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import Product from '../components/Product';
+import products from '../products';
 
 export default function Home() {
  return (
@@ -25,9 +27,14 @@ export default function Home() {
    <Header />
    <main className='py-3'>
     <Container>
-     <div>
-      <h1>Welcome to ProShop</h1>
-     </div>
+     <h1>Latest Products</h1>
+     <Row>
+      {products.map((product) => (
+       <Col sm={12} md={6} lg={4} xl={3}>
+        <Product product={product} />
+       </Col>
+      ))}
+     </Row>
     </Container>
    </main>
    <Footer />
