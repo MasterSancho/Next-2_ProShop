@@ -6,7 +6,9 @@ const Header = () => {
   <Navbar bg='dark' variant='dark' expand='lg' collapseOnSelect>
    <Container>
     <Link href='/'>
-     <Navbar.Brand>ProShop</Navbar.Brand>
+     <a>
+      <Navbar.Brand>ProShop</Navbar.Brand>
+     </a>
     </Link>
     <Navbar.Toggle aria-controls='basic-navbar-nav' />
     <Navbar.Collapse id='basic-navbar-nav'>
